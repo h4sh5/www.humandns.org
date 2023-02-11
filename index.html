@@ -1,0 +1,75 @@
+<html>
+
+<style type="text/css">
+	* {
+		font-family: monospace;
+		/*padding-left: 0.5em;*/
+	}
+
+	p {
+		font-size: 15px;
+
+	}
+
+	#topbar {
+		font-size: 20px;
+		background: cornflowerblue;
+		color:  white;
+		padding-top: 0.8em;
+		padding-bottom: 0.8em;
+		padding-left: 0.5em;
+	}
+
+	code {
+		background: #ccc;
+		font-size: 15px;
+	}
+
+	a {
+		font-size: 15px;
+	}
+
+
+</style>
+
+<body>
+<div id=topbar>
+humandns - Registrar-free addresses ipv6 and ipv4
+</div>
+
+<div id=main>
+
+<h2 id=tryit>Try it now!</h2>
+
+<p>To use it, simply visit <a target=_blank id=thelink href=http://ns1.humandns.org/rego>http://ns1.humandns.org/rego</a> to get your domain name. It will stay the same for the same IP address.</p>
+
+<p>Then, either send the link <a target=_blank href=http://ns1.humandns.org/visit?d=your-domain-name>http://ns1.humandns.org/visit?d=your-domain-name</a> to your friends (that will give them a page with your IP address on it) or point your computer/router's DNS server to the address of <code>ns1.humandns.org</code> (at the moment it's <code>149.28.208.14</code>) to resolve humandns names!</p>
+
+<p>To resolve using the command line, try</p>
+
+<code>
+nslookup put-your-domain-name-here.ip6 ns1.humandns.org
+</code>
+
+
+<h2>What is it?</h2>
+
+<p>Liberating DNS for humans. No more registrars; generate, register and act as authoritative server for human readable domains.</p>
+
+<p>Imagine a world where every single person and business have a /64 IPv6 block (that's the mininum assignment!). That's 18 Billion Billion addresses! Even if you give each person a /96, that's 4 Billion addresses, the size of the IPv4 internet in its entirety.</p>
+
+<p>With that many number of addresses, there's enough for everyone; but IPv6 addresses are very long, and impossible to send to someone via a human readable format unless you buy a domain. Forget about buying domains; those should be free!</p>
+
+<p>This is where humandns comes in - it works by hashing the IP address the request comes from using a human readable hash, which gives each IP a unique hash. You just get what you're given, the hashing algorithm ensures (mostly) that the same IP gets the same name. Just proof you own the IP address by sending a HTTP request from it.</p>
+
+<h2>Source code</h2>
+
+<a href=https://github.com/h4sh5/humandns>Git repo here</a>
+
+</div>
+
+</body>
+
+
+
+</html>
